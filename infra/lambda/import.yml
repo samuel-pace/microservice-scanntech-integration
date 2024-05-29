@@ -1,0 +1,8 @@
+import:
+  handler: functions/api/import/index.handler
+  events:
+    - http:
+        path: /prices/import
+        method: POST
+        cors: ${file(./infra/api-gateway/cors.yml)}
+        private: true
